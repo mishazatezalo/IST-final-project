@@ -1,0 +1,615 @@
+:root {
+    --primary-color: #1e407c;
+    --primary-gradient: linear-gradient(135deg, #1e407c 0%, #0d2240 100%);
+    --secondary-color: #ffffff;
+    --light-gray: #f8f9fa;
+    --dark-gray: #343a40;
+    --text-color: #212529;
+    --link-color: #0056b3;
+    --footer-bg: linear-gradient(135deg, #1e407c 0%, #0d2240 100%);
+    --footer-text: #ffffff;
+    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --card-gradient: linear-gradient(to bottom, #ffffff, #f8f9fa);
+    --button-gradient: linear-gradient(to right, #1e407c, #2a5298);
+    --hover-gradient: linear-gradient(to right, #2a5298, #1e407c);
+    --nav-bg: #1e3877;
+  }
+  
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text-color);
+    background-color: var(--light-gray);
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Header & Navigation */
+  header {
+    margin-bottom: 2rem;
+  }
+  
+  .navbar {
+    background-color: var(--nav-bg);
+    padding: 0.75rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-brand {
+    font-size: 1.6rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .navbar-brand:hover {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .logo {
+    height: 120px;
+    width: auto;
+    margin-right: -0.25rem;
+    margin-top: -20px;
+    margin-bottom: -20px;
+  }
+  
+  .nav-link {
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s;
+    color: white !important;
+  }
+  
+  .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    text-decoration: none;
+  }
+  
+  .login-btn {
+    border: 1px solid white;
+    border-radius: 4px;
+    padding: 0.5rem 1.5rem;
+    margin-left: 0.5rem;
+  }
+  
+  main {
+    min-height: calc(100vh - 200px);
+    padding-bottom: 3rem;
+  }
+  
+  .section-title {
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+  }
+  
+  .section-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: var(--primary-gradient);
+  }
+  
+  .hero {
+    padding: 3rem 0;
+    background: var(--card-gradient);
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: var(--card-shadow);
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+  }
+  
+  .hero .lead {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-buttons {
+    margin-top: 1.5rem;
+  }
+  
+  .hero-buttons .btn {
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero-image {
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+  }
+  
+  .features {
+    padding: 3rem 0;
+  }
+  
+  .feature-card {
+    margin-bottom: 1.5rem;
+  }
+  
+  .feature-card .card {
+    height: 100%;
+    background: var(--card-gradient);
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .feature-card .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .feature-card .card-title {
+    color: var(--primary-color);
+    font-weight: 600;
+  }
+  
+
+  .announcements {
+    padding: 3rem 0;
+    background: var(--card-gradient);
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: var(--card-shadow);
+  }
+  
+  .announcement {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--light-gray);
+  }
+  
+  .announcement:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  
+  .announcement h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+  }
+  
+  .announcement .date {
+    font-size: 0.875rem;
+    color: #6c757d;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Quick Links Section */
+  .quick-links {
+    padding: 3rem 0;
+  }
+  
+  .resource-list {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .resource-list li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .resource-list a {
+    display: block;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .resource-list a:hover {
+    background-color: var(--light-gray);
+    text-decoration: none;
+  }
+  
+  .login-section {
+    padding: 3rem 0;
+  }
+  
+  .login-card .card {
+    box-shadow: var(--card-shadow);
+    background: var(--card-gradient);
+  }
+  
+  .login-card .card-header {
+    background: var(--primary-gradient);
+    color: white;
+    padding: 1rem;
+  }
+  
+  .login-card .card-header h2 {
+    margin-bottom: 0;
+    font-size: 1.5rem;
+  }
+  
+  .login-links {
+    text-align: center;
+  }
+  
+  .login-info .card {
+    background: var(--card-gradient);
+  }
+  
+  /* Button Styling */
+  .btn-primary {
+    background: var(--button-gradient);
+    border: none;
+    transition: background 0.3s;
+  }
+  
+  .btn-primary:hover {
+    background: var(--hover-gradient);
+  }
+  
+  /* Contact Page */
+
+  .navy-header {
+    background-color: #1e3877;
+    color: white;
+    padding: 1rem;  
+  }
+  .contact-section {
+    padding: 3rem 0;
+  }
+  
+  .contact-card {
+    box-shadow: var(--card-shadow);
+  }
+  
+  .contact-card .card {
+    background: var(--card-gradient);
+  }
+  
+  .contact-info {
+    padding: 2rem 0;
+  }
+  
+  .contact-method {
+    text-align: center;
+    padding: 1.5rem;
+    background: var(--card-gradient);
+    border-radius: 8px;
+    height: 100%;
+    box-shadow: var(--card-shadow);
+  }
+  
+  .contact-method h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+  
+  .faq-section {
+    padding: 2rem 0;
+  }
+  
+  /* Course Catalog Page */
+  .search-box {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.course-row:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+.badge-open {
+    background-color: #28a745;
+}
+.badge-closed {
+    background-color: #dc3545;
+}
+.badge-waitlist {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+  .course-catalog {
+    padding: 2rem 0;
+  }
+  
+  .search-filters {
+    margin-bottom: 2rem;
+  }
+  
+  .search-filters .card {
+    background: var(--card-gradient);
+    box-shadow: var(--card-shadow);
+  }
+  
+  .results-header {
+    margin-bottom: 1rem;
+  }
+  
+  .course-table td {
+    vertical-align: middle;
+  }
+  
+  .course-pagination {
+    margin-top: 2rem;
+  }
+  
+  /* Schedule Page */
+  .schedule-card {
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+}
+
+.course-block {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+}
+
+.course-block h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.course-block p {
+    margin-bottom: 0.25rem;
+    font-size: 0.9rem;
+}
+
+.cmpsc-course {
+    background-color: rgba(52, 152, 219, 0.15);
+    border-left: 4px solid rgba(52, 152, 219, 0.8);
+}
+
+.math-course {
+    background-color: rgba(46, 204, 113, 0.15);
+    border-left: 4px solid rgba(46, 204, 113, 0.8);
+}
+
+.engl-course {
+    background-color: rgba(155, 89, 182, 0.15);
+    border-left: 4px solid rgba(155, 89, 182, 0.8);
+}
+
+.econ-course {
+    background-color: rgba(241, 196, 15, 0.15);
+    border-left: 4px solid rgba(241, 196, 15, 0.8);
+}
+
+.day-column {
+    padding: 1rem;
+}
+
+.day-heading {
+    font-weight: 600;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #dee2e6;
+}
+
+  .schedule-section {
+    padding: 2rem 0;
+  }
+  
+  .schedule-controls {
+    margin-bottom: 2rem;
+  }
+  
+  .schedule-controls .card {
+    background: var(--card-gradient);
+    box-shadow: var(--card-shadow);
+  }
+  
+  .schedule-table {
+    table-layout: fixed;
+  }
+  
+  .time-column {
+    width: 100px;
+  }
+  
+  .time-slot {
+    font-weight: 600;
+    text-align: center;
+    vertical-align: middle;
+  }
+  
+  .course-slot {
+    vertical-align: top;
+    padding: 0;
+    position: relative;
+  }
+  
+  .course-info {
+    padding: 0.5rem;
+    height: 100%;
+  }
+  
+  .course-info h5 {
+    margin-bottom: 0.25rem;
+    font-size: 1rem;
+  }
+  
+  .course-info p {
+    margin-bottom: 0.25rem;
+    font-size: 0.875rem;
+  }
+  
+  /* Course colors */
+  .cmpsc {
+    background: linear-gradient(to bottom right, rgba(52, 152, 219, 0.2), rgba(52, 152, 219, 0.1));
+  }
+  
+  .math {
+    background: linear-gradient(to bottom right, rgba(46, 204, 113, 0.2), rgba(46, 204, 113, 0.1));
+  }
+  
+  .engl {
+    background: linear-gradient(to bottom right, rgba(155, 89, 182, 0.2), rgba(155, 89, 182, 0.1));
+  }
+  
+  .econ {
+    background: linear-gradient(to bottom right, rgba(241, 196, 15, 0.2), rgba(241, 196, 15, 0.1));
+  }
+  
+  .schedule-summary {
+    margin-top: 2rem;
+  }
+  
+  .schedule-summary .card {
+    background: var(--card-gradient);
+    box-shadow: var(--card-shadow);
+  }
+  
+  .summary-item {
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .summary-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0;
+  }
+  
+  /* Footer */
+  footer {
+    background: var(--footer-bg);
+    color: var(--footer-text);
+    padding: 2rem 0 1rem;
+    position: relative; 
+    width: 100%;
+  }
+  
+  footer h4 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+  
+  .footer-links {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .footer-links li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-links a {
+    color: var(--footer-text);
+    opacity: 0.8;
+    transition: opacity 0.3s;
+  }
+  
+  .footer-links a:hover {
+    opacity: 1;
+    text-decoration: none;
+  }
+  
+  .copyright {
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    opacity: 0.8;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 991.98px) {
+    .hero {
+      text-align: center;
+    }
+  
+    .hero-image {
+      margin-top: 2rem;
+    }
+  
+    .sidebar {
+      margin-top: 2rem;
+    }
+  }
+  
+  @media (max-width: 767.98px) {
+    .navbar-brand {
+      font-size: 1.5rem;
+    }
+  
+    .logo {
+      height: 35px;
+    }
+  
+    .hero h1 {
+      font-size: 2rem;
+    }
+  
+    .section-title {
+      font-size: 1.75rem;
+    }
+  
+    .time-column,
+    .time-slot {
+      width: 80px;
+      font-size: 0.875rem;
+    }
+  
+    .course-info h5 {
+      font-size: 0.875rem;
+    }
+  
+    .course-info p {
+      font-size: 0.75rem;
+    }
+  }
+  
+  @media (max-width: 575.98px) {
+    .navbar-brand {
+      font-size: 1.4rem;
+    }
+  
+    .logo {
+      height: 30px;
+    }
+  
+    .hero h1 {
+      font-size: 1.75rem;
+    }
+  
+    .hero .lead {
+      font-size: 1.1rem;
+    }
+  
+    .section-title {
+      font-size: 1.5rem;
+    }
+  
+    .stat-value {
+      font-size: 1.5rem;
+    }
+  }
+  

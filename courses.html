@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Catalog - LionPATH</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('submit-btn').onclick = function() {
+            document.getElementById('form-success').style.display = 'block';
+        };
+    </script>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="https://studyarchitecture.com/wp-content/uploads/58_PennsylvaniaStateUniversity_icon_color.png" alt="Penn State Logo" class="logo">
+                    LionPATH
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="courses.html">Courses</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="schedule.html">Schedule</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link login-btn" href="login.html">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container py-4">
+            <h1 class="mb-4">Course Catalog</h1>
+            <p class="lead mb-4">Browse and search for available courses</p>
+            
+            <div class="search-box">
+                <form id="search-form">
+                    <div class="row mb-3">
+                        <div class="col-md-4 mb-3">
+                            <label for="subject" class="form-label">Subject</label>
+                            <select class="form-select" id="subject">
+                                <option value="">All Avaliable Subjects</option>
+                                <option value="CMPSC">Computer Science (CMPSC)</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="level" class="form-label">Course Level</label>
+                            <select class="form-select" id="level">
+                                <option value="">All Levels</option>
+                                <option value="100">100 Level</option>
+                                <option value="200">200 Level</option>
+                                <option value="300">300 Level</option>
+                                <option value="400">400 Level</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                        </div>
+                        <div class="col-md-6 text-end">
+                            <button type="button" class="btn btn-primary" id="search-btn">Search</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="mt-4">
+                <h2>Available Courses <span class="badge bg-secondary">3 results</span></h2>
+                
+                <div class="table-responsive mt-3">
+                    <table class="table table-bordered">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Course</th>
+                                <th>Title</th>
+                                <th>Credits</th>
+                                <th>Instructor</th>
+                                <th>Schedule</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="course-row">
+                                <td>CMPSC 131</td>
+                                <td>Introduction to Programming</td>
+                                <td>3</td>
+                                <td>Dan Khan</td>
+                                <td>MWF 10:10-11:00 AM</td>
+                                <td><span class="badge badge-open">Open</span></td>
+                                <td><button class="btn btn-sm btn-outline-primary add-btn">Add</button></td>
+                            </tr>
+                            <tr class="course-row">
+                                <td>CMPSC 221</td>
+                                <td>Object Oriented Programming</td>
+                                <td>3</td>
+                                <td>Alan Verblanc</td>
+                                <td>TR 1:35-2:50 PM</td>
+                                <td><span class="badge badge-open">Open</span></td>
+                                <td><button class="btn btn-sm btn-outline-primary add-btn">Add</button></td>
+                            </tr>
+                            <tr class="course-row">
+                                <td>CMPSC 360</td>
+                                <td>Discrete Mathematics</td>
+                                <td>3</td>
+                                <td>Mahfuza Farooque</td>
+                                <td>MWF 9:05-9:55 AM</td>
+                                <td><span class="badge badge-closed">Closed</span></td>
+                                <td><button class="btn btn-sm btn-outline-secondary add-btn" disabled>Waitlist</button></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>LionPATH</h4>
+                    <p>Penn State's Student Information System</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Contact</h4>
+                    <p>Email: lionpath@psu.edu</p>
+                    <p>Phone: (814) 555-1234</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">Accessibility</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 text-center mt-3">
+                    <p class="copyright">&copy; 2025 The Pennsylvania State University. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+
